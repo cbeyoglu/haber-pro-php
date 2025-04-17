@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analytics – Admin</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/admin.css" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h5 class="text-center text-white mb-4">Admin Panel</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="dashboard.html"     class="nav-link">📊 Dashboard</a></li>
+      <li class="nav-item"><a href="posts.html"         class="nav-link">📰 Haber Listesi</a></li>
+      <li class="nav-item"><a href="categories.html"    class="nav-link">🗂️ Kategoriler</a></li>
+      <li class="nav-item"><a href="comments.html"      class="nav-link">💬 Yorumlar</a></li>
+      <li class="nav-item"><a href="users.html"         class="nav-link">👥 Kullanıcılar</a></li>
+      <li class="nav-item"><a href="roles.html"         class="nav-link">🔑 Roller</a></li>
+      <li class="nav-item"><a href="media.html"         class="nav-link">📁 Medya</a></li>
+      <li class="nav-item"><a href="settings.html"      class="nav-link">⚙️ Ayarlar</a></li>
+      <li class="nav-item"><a href="analytics.html"     class="nav-link active">📈 Analytics</a></li>
+      <li class="nav-item mt-auto"><a href="login.html" class="nav-link">🚪 Çıkış</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2 class="mb-4">Analytics & Raporlama</h2>
+
+    <!-- Tarih Aralığı Filtresi -->
+    <form class="row g-2 align-items-center mb-4">
+      <div class="col-auto">
+        <label class="form-label">Başlangıç:</label>
+        <input type="date" class="form-control" id="startDate" value="">
+      </div>
+      <div class="col-auto">
+        <label class="form-label">Bitiş:</label>
+        <input type="date" class="form-control" id="endDate" value="">
+      </div>
+      <div class="col-auto">
+        <button type="button" id="applyFilter" class="btn btn-primary mt-4">Uygula</button>
+      </div>
+    </form>
+
+    <div class="row gy-4">
+      <!-- Trafik Grafiği -->
+      <div class="col-12 col-lg-6">
+        <div class="card p-3">
+          <h5 class="card-title mb-3">Ziyaretçi Trafiği</h5>
+          <canvas id="trafficChart" height="200"></canvas>
+        </div>
+      </div>
+
+      <!-- Popüler Haberler -->
+      <div class="col-12 col-lg-6">
+        <div class="card p-3">
+          <h5 class="card-title mb-3">En Popüler Haberler</h5>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Haber Başlığı</th>
+                  <th>Okunma</th>
+                  <th>Yayın Tarihi</th>
+                </tr>
+              </thead>
+              <tbody id="popularNews">
+                <tr>
+                  <td>1</td>
+                  <td><a href="#">Lorem Ipsum Haber</a></td>
+                  <td>1.245</td>
+                  <td>15 Nisan 2025</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><a href="#">Dolor Sit Amet</a></td>
+                  <td>987</td>
+                  <td>14 Nisan 2025</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><a href="#">Consectetur Adipiscing</a></td>
+                  <td>862</td>
+                  <td>13 Nisan 2025</td>
+                </tr>
+                <!-- Diğer satırlar… -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Örnek Chart.js kurulumu
+    const ctx = document.getElementById('trafficChart').getContext('2d');
+    let trafficChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['10 Nis','11 Nis','12 Nis','13 Nis','14 Nis','15 Nis','16 Nis'],
+        datasets: [{
+          label: 'Günlük Ziyaretçi',
+          data: [120, 150, 180, 170, 200, 220, 210],
+          fill: true,
+          borderColor: '#0d6efd',
+          backgroundColor: 'rgba(13,110,253,0.2)',
+          tension: 0.4
+        }]
+      },
+      options: {
+        scales: {
+          y: { beginAtZero: true }
+        },
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
+
+    // Tarih filtresi butonuna tıklandığında grafiği yenileme (örnek)
+    document.getElementById('applyFilter').addEventListener('click', () => {
+      // Burada AJAX ile back-end'den yeni veri çekilip chart.data ve chart.update() çağrılmalı
+      alert('Filtre uygulandı! Gerçek veriyi AJAX ile alıp grafiği güncelle.');
+    });
+  </script>
+</body>
+</html>

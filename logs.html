@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log & Güvenlik – Admin</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/admin.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h5 class="text-center text-white mb-4">Admin Panel</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="dashboard.html"       class="nav-link">📊 Dashboard</a></li>
+      <li class="nav-item"><a href="posts.html"           class="nav-link">📰 Haber Listesi</a></li>
+      <li class="nav-item"><a href="categories.html"      class="nav-link">🗂️ Kategoriler</a></li>
+      <li class="nav-item"><a href="comments.html"        class="nav-link">💬 Yorumlar</a></li>
+      <li class="nav-item"><a href="users.html"           class="nav-link">👥 Kullanıcılar</a></li>
+      <li class="nav-item"><a href="roles.html"           class="nav-link">🔑 Roller</a></li>
+      <li class="nav-item"><a href="media.html"           class="nav-link">📁 Medya</a></li>
+      <li class="nav-item"><a href="settings.html"        class="nav-link">⚙️ Ayarlar</a></li>
+      <li class="nav-item"><a href="analytics.html"       class="nav-link">📈 Analytics</a></li>
+      <li class="nav-item"><a href="subscribers.html"     class="nav-link">✉️ Aboneler</a></li>
+      <li class="nav-item"><a href="notifications.html"   class="nav-link">🔔 Bildirimler</a></li>
+      <li class="nav-item"><a href="seo.html"             class="nav-link">🔍 SEO & Meta</a></li>
+      <li class="nav-item"><a href="logs.html"            class="nav-link active">🛡️ Log & Güvenlik</a></li>
+      <li class="nav-item mt-auto"><a href="login.html"   class="nav-link">🚪 Çıkış</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2 class="mb-4">Log & Güvenlik</h2>
+
+    <!-- Sekmeler -->
+    <ul class="nav nav-tabs mb-4" id="securityTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="login-log-tab" data-bs-toggle="tab" data-bs-target="#login-log" type="button" role="tab">
+          Giriş/Çıkış Kayıtları
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="error-log-tab" data-bs-toggle="tab" data-bs-target="#error-log" type="button" role="tab">
+          Hata Logları
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="backup-tab" data-bs-toggle="tab" data-bs-target="#backup" type="button" role="tab">
+          Yedekleme/Geri Yükleme
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="securityTabContent">
+
+      <!-- Giriş/Çıkış Kayıtları -->
+      <div class="tab-pane fade show active" id="login-log" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Tarih & Saat</th>
+                <th>Kullanıcı</th>
+                <th>IP Adresi</th>
+                <th>İşlem</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>17 Nisan 2025 10:12</td>
+                <td>Cem Yılmaz</td>
+                <td>192.168.1.10</td>
+                <td>Giriş</td>
+              </tr>
+              <tr>
+                <td>17 Nisan 2025 18:45</td>
+                <td>Cem Yılmaz</td>
+                <td>192.168.1.10</td>
+                <td>Çıkış</td>
+              </tr>
+              <!-- Diğer kayıtlar… -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Hata Logları -->
+      <div class="tab-pane fade" id="error-log" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Tarih & Saat</th>
+                <th>Dosya</th>
+                <th>Seviye</th>
+                <th>Mesaj</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>17 Nisan 2025 12:30</td>
+                <td>article.php</td>
+                <td><span class="badge bg-danger">Critical</span></td>
+                <td>Veritabanı bağlantı hatası</td>
+              </tr>
+              <tr>
+                <td>17 Nisan 2025 14:05</td>
+                <td>user.php</td>
+                <td><span class="badge bg-warning">Warning</span></td>
+                <td>Geçersiz giriş denemesi</td>
+              </tr>
+              <!-- Diğer kayıtlar… -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Yedekleme / Geri Yükleme -->
+      <div class="tab-pane fade" id="backup" role="tabpanel">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5>Veritabanı Yedekleri</h5>
+          <button id="createBackup" class="btn btn-success"><i class="bi bi-cloud-arrow-up"></i> Yeni Yedek Oluştur</button>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Dosya Adı</th>
+                <th>Oluşturma Tarihi</th>
+                <th>Boyut</th>
+                <th>İşlemler</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>backup_2025-04-17.sql</td>
+                <td>17 Nisan 2025 20:00</td>
+                <td>3.2 MB</td>
+                <td>
+                  <button class="btn btn-sm btn-outline-primary">İndir</button>
+                  <button class="btn btn-sm btn-outline-secondary">Geri Yükle</button>
+                  <button class="btn btn-sm btn-outline-danger">Sil</button>
+                </td>
+              </tr>
+              <!-- Diğer yedekler… -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Yeni yedek oluşturma butonu örneği
+    document.getElementById('createBackup').addEventListener('click', () => {
+      alert('Yedekleme işlemi başlatıldı. (Sunucu tarafında işleyin)');
+    });
+  </script>
+</body>
+</html>

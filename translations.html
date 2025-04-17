@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Çeviriler – Admin</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar (aynı) -->
+  <nav class="sidebar">…</nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Çeviri Yönetimi</h2>
+      <a href="edit-translation.html" class="btn btn-primary"><i class="bi bi-pencil-square"></i> Yeni Çeviri</a>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped align-middle">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Haber Başlığı</th>
+            <th>Dil</th>
+            <th>Durum</th>
+            <th>İşlemler</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Lorem Ipsum Dolor</td>
+            <td>en</td>
+            <td><span class="badge bg-success">Tamamlandı</span></td>
+            <td>
+              <a href="edit-translation.html?id=1&lang=en" class="btn btn-sm btn-outline-secondary">Düzenle</a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Lorem Ipsum Dolor</td>
+            <td>fr</td>
+            <td><span class="badge bg-warning">Beklemede</span></td>
+            <td>
+              <a href="edit-translation.html?id=1&lang=fr" class="btn btn-sm btn-outline-secondary">Düzenle</a>
+            </td>
+          </tr>
+          <!-- Diğer çeviriler… -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

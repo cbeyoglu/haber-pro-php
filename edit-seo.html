@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meta Düzenle – Admin</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h5 class="text-center text-white mb-4">Admin Panel</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="dashboard.html"       class="nav-link">📊 Dashboard</a></li>
+      <li class="nav-item"><a href="posts.html"           class="nav-link">📰 Haber Listesi</a></li>
+      <li class="nav-item"><a href="categories.html"      class="nav-link">🗂️ Kategoriler</a></li>
+      <li class="nav-item"><a href="comments.html"        class="nav-link">💬 Yorumlar</a></li>
+      <li class="nav-item"><a href="users.html"           class="nav-link">👥 Kullanıcılar</a></li>
+      <li class="nav-item"><a href="roles.html"           class="nav-link">🔑 Roller</a></li>
+      <li class="nav-item"><a href="media.html"           class="nav-link">📁 Medya</a></li>
+      <li class="nav-item"><a href="settings.html"        class="nav-link">⚙️ Ayarlar</a></li>
+      <li class="nav-item"><a href="analytics.html"       class="nav-link">📈 Analytics</a></li>
+      <li class="nav-item"><a href="subscribers.html"     class="nav-link">✉️ Aboneler</a></li>
+      <li class="nav-item"><a href="notifications.html"   class="nav-link">🔔 Bildirimler</a></li>
+      <li class="nav-item"><a href="seo.html"             class="nav-link active">🔍 SEO & Meta</a></li>
+      <li class="nav-item mt-auto"><a href="login.html"   class="nav-link">🚪 Çıkış</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Meta Düzenle</h2>
+      <a href="seo.html" class="btn btn-outline-secondary">← Geri</a>
+    </div>
+
+    <form class="row g-4">
+      <div class="col-12">
+        <label class="form-label">Haber Başlığı</label>
+        <input type="text" class="form-control" value="Lorem Ipsum Dolor" readonly>
+      </div>
+      <div class="col-12 col-md-6">
+        <label class="form-label">URL Slug</label>
+        <input type="text" class="form-control" value="lorem-ipsum-dolor" required>
+      </div>
+      <div class="col-12 col-md-6">
+        <label class="form-label">Meta Başlık (Title)</label>
+        <input type="text" class="form-control" value="Lorem Ipsum Haber Başlığı" required>
+      </div>
+      <div class="col-12">
+        <label class="form-label">Meta Açıklama (Description)</label>
+        <textarea class="form-control" rows="4" required>Bu haberle ilgili kısa bir açıklama …</textarea>
+      </div>
+      <div class="col-12 text-end">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

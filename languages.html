@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diller – Admin</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/admin.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h5 class="text-center text-white mb-4">Admin Panel</h5>
+    <ul class="nav flex-column">
+      <!-- …önceki linkler… -->
+      <li class="nav-item"><a href="seo.html"          class="nav-link">🔍 SEO & Meta</a></li>
+      <li class="nav-item"><a href="logs.html"         class="nav-link">🛡️ Log & Güvenlik</a></li>
+      <li class="nav-item"><a href="languages.html"    class="nav-link active">🌐 Diller</a></li>
+      <li class="nav-item"><a href="translations.html" class="nav-link">✏️ Çeviriler</a></li>
+      <li class="nav-item mt-auto"><a href="login.html" class="nav-link">🚪 Çıkış</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Dil Yönetimi</h2>
+      <a href="new-language.html" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Yeni Dil</a>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped align-middle">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Dil Kodu</th>
+            <th>Dil Adı</th>
+            <th>Aktif</th>
+            <th>İşlemler</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>tr</td>
+            <td>Türkçe</td>
+            <td><span class="badge bg-success">Evet</span></td>
+            <td>
+              <a href="edit-language.html?id=1" class="btn btn-sm btn-outline-secondary">Düzenle</a>
+              <button class="btn btn-sm btn-outline-danger">Sil</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>en</td>
+            <td>English</td>
+            <td><span class="badge bg-success">Evet</span></td>
+            <td>
+              <a href="edit-language.html?id=2" class="btn btn-sm btn-outline-secondary">Düzenle</a>
+              <button class="btn btn-sm btn-outline-danger">Sil</button>
+            </td>
+          </tr>
+          <!-- Diğer diller… -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

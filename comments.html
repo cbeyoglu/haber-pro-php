@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yorum Moderasyonu – Admin</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h5 class="text-center text-white mb-4">Admin Panel</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="dashboard.html"     class="nav-link">📊 Dashboard</a></li>
+      <li class="nav-item"><a href="posts.html"         class="nav-link">📰 Haber Listesi</a></li>
+      <li class="nav-item"><a href="categories.html"    class="nav-link">🗂️ Kategoriler</a></li>
+      <li class="nav-item"><a href="comments.html"      class="nav-link active">💬 Yorumlar</a></li>
+      <li class="nav-item mt-auto"><a href="login.html" class="nav-link">🚪 Çıkış</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Yorum Moderasyonu</h2>
+      <span class="text-muted small">Toplam: 56</span>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Kullanıcı</th>
+            <th>Makale</th>
+            <th>Tarih</th>
+            <th>Durum</th>
+            <th class="text-truncate">Özet</th>
+            <th style="width:200px">İşlemler</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td>Ayşe Demir</td>
+            <td>Teknolojide Yenilikler</td>
+            <td>17 Nisan 2025</td>
+            <td><span class="badge bg-warning">Beklemede</span></td>
+            <td class="text-truncate" style="max-width:200px;">
+              Çok faydalı bir makale, teşekkürler!
+            </td>
+            <td>
+              <a href="comment-details.html?id=101" class="btn btn-sm btn-outline-secondary mb-1">Detay</a>
+              <button class="btn btn-sm btn-outline-success mb-1">Onayla</button>
+              <button class="btn btn-sm btn-outline-danger mb-1">Reddet</button>
+              <button class="btn btn-sm btn-outline-dark">Spam</button>
+            </td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Mehmet Kaya</td>
+            <td>Spor Haberleri</td>
+            <td>16 Nisan 2025</td>
+            <td><span class="badge bg-success">Onaylandı</span></td>
+            <td class="text-truncate" style="max-width:200px;">
+              Harika içerik, lütfen daha fazlasını ekleyin.
+            </td>
+            <td>
+              <a href="comment-details.html?id=102" class="btn btn-sm btn-outline-secondary mb-1">Detay</a>
+              <button class="btn btn-sm btn-outline-danger mb-1">Sil</button>
+              <button class="btn btn-sm btn-outline-dark">Spam</button>
+            </td>
+          </tr>
+          <!-- Diğer yorum satırları… -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haberi Düzenle – Admin</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h5 class="text-center text-white mb-4">Admin Panel</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="dashboard.html" class="nav-link">📊 Dashboard</a></li>
+      <li class="nav-item"><a href="posts.html" class="nav-link">📰 Haber Listesi</a></li>
+      <li class="nav-item"><a href="new-post.html" class="nav-link">✏️ Yeni Haber</a></li>
+      <li class="nav-item mt-auto"><a href="login.html" class="nav-link">🚪 Çıkış</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2>Haberi Düzenle</h2>
+    <form class="mt-4">
+      <div class="mb-3">
+        <label class="form-label">Başlık</label>
+        <input type="text" class="form-control" value="Mevcut Haber Başlığı" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Kategori</label>
+        <select class="form-select">
+          <option selected>Teknoloji</option>
+          <option>Spor</option>
+          <option>Dünya</option>
+          <option>Ekonomi</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">İçerik</label>
+        <textarea class="form-control" rows="6" required>Mevcut içerik metni…</textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Durum</label>
+        <select class="form-select">
+          <option value="published" selected>Yayınlandı</option>
+          <option value="draft">Taslak</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Güncelle</button>
+    </form>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

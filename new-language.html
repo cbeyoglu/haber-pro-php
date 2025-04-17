@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yeni Dil – Admin</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar (aynı) -->
+  <nav class="sidebar">…</nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2>Yeni Dil Ekle</h2>
+    <form class="row g-4 mt-3">
+      <div class="col-md-4">
+        <label class="form-label">Dil Kodu</label>
+        <input type="text" class="form-control" placeholder="Ör: tr, en, fr" required>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Dil Adı</label>
+        <input type="text" class="form-control" placeholder="Ör: Türkçe, English" required>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Aktif</label>
+        <select class="form-select">
+          <option value="1" selected>Evet</option>
+          <option value="0">Hayır</option>
+        </select>
+      </div>
+      <div class="col-12 text-end">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

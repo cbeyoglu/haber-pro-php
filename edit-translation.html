@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Çeviri Düzenle – Admin</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar (aynı) -->
+  <nav class="sidebar">…</nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Çeviri Düzenle</h2>
+      <a href="translations.html" class="btn btn-outline-secondary">← Geri</a>
+    </div>
+
+    <form class="row g-4">
+      <div class="col-12">
+        <label class="form-label">Haber Başlığı (Orijinal)</label>
+        <input type="text" class="form-control" value="Lorem Ipsum Dolor" readonly>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Dil</label>
+        <select class="form-select">
+          <option value="en" selected>English</option>
+          <option value="fr">Français</option>
+          <!-- Diğer diller… -->
+        </select>
+      </div>
+      <div class="col-md-8">
+        <label class="form-label">Çevrilecek Başlık</label>
+        <input type="text" class="form-control" placeholder="Title in selected language" required>
+      </div>
+      <div class="col-12">
+        <label class="form-label">Çeviri İçeriği</label>
+        <textarea class="form-control" rows="6" placeholder="Translated content…" required></textarea>
+      </div>
+      <div class="col-12 text-end">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

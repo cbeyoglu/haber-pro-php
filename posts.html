@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haber Listesi – Admin</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h5 class="text-center text-white mb-4">Admin Panel</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="dashboard.html" class="nav-link">📊 Dashboard</a></li>
+      <li class="nav-item"><a href="posts.html" class="nav-link active">📰 Haber Listesi</a></li>
+      <li class="nav-item"><a href="new-post.html" class="nav-link">✏️ Yeni Haber</a></li>
+      <li class="nav-item mt-auto"><a href="login.html" class="nav-link">🚪 Çıkış</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Haber Yönetimi</h2>
+      <a href="new-post.html" class="btn btn-primary">+ Yeni Haber</a>
+    </div>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Başlık</th>
+            <th>Kategori</th>
+            <th>Tarih</th>
+            <th>Durum</th>
+            <th>İşlemler</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Lorem Ipsum Dolor</td>
+            <td>Teknoloji</td>
+            <td>17 Nisan 2025</td>
+            <td><span class="badge bg-success">Yayınlandı</span></td>
+            <td>
+              <a href="edit-post.html?id=1" class="btn btn-sm btn-outline-secondary">Düzenle</a>
+              <button class="btn btn-sm btn-outline-danger">Sil</button>
+            </td>
+          </tr>
+          <!-- Diğer satırlar… -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

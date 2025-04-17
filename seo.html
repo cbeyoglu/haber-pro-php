@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEO & Meta Yönetimi – Admin</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h5 class="text-center text-white mb-4">Admin Panel</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="dashboard.html"       class="nav-link">📊 Dashboard</a></li>
+      <li class="nav-item"><a href="posts.html"           class="nav-link">📰 Haber Listesi</a></li>
+      <li class="nav-item"><a href="categories.html"      class="nav-link">🗂️ Kategoriler</a></li>
+      <li class="nav-item"><a href="comments.html"        class="nav-link">💬 Yorumlar</a></li>
+      <li class="nav-item"><a href="users.html"           class="nav-link">👥 Kullanıcılar</a></li>
+      <li class="nav-item"><a href="roles.html"           class="nav-link">🔑 Roller</a></li>
+      <li class="nav-item"><a href="media.html"           class="nav-link">📁 Medya</a></li>
+      <li class="nav-item"><a href="settings.html"        class="nav-link">⚙️ Ayarlar</a></li>
+      <li class="nav-item"><a href="analytics.html"       class="nav-link">📈 Analytics</a></li>
+      <li class="nav-item"><a href="subscribers.html"     class="nav-link">✉️ Aboneler</a></li>
+      <li class="nav-item"><a href="notifications.html"   class="nav-link">🔔 Bildirimler</a></li>
+      <li class="nav-item"><a href="seo.html"             class="nav-link active">🔍 SEO & Meta</a></li>
+      <li class="nav-item mt-auto"><a href="login.html"   class="nav-link">🚪 Çıkış</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>SEO & Meta Yönetimi</h2>
+      <a href="edit-seo.html" class="btn btn-primary">+ Yeni Meta</a>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Haber Başlığı</th>
+            <th>Slug</th>
+            <th>Meta Başlık</th>
+            <th>Meta Açıklama</th>
+            <th>İşlemler</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Lorem Ipsum Dolor</td>
+            <td>lorem-ipsum-dolor</td>
+            <td class="text-truncate" style="max-width:150px;">Lorem Ipsum Haber Başlığı</td>
+            <td class="text-truncate" style="max-width:250px;">Bu haberle ilgili kısa bir açıklama …</td>
+            <td>
+              <a href="edit-seo.html?id=1" class="btn btn-sm btn-outline-secondary">Düzenle</a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Consectetur Adipiscing</td>
+            <td>consectetur-adipiscing</td>
+            <td class="text-truncate" style="max-width:150px;">Consectetur Adipiscing Başlığı</td>
+            <td class="text-truncate" style="max-width:250px;">Site okuyucularına yönelik kısa özet …</td>
+            <td>
+              <a href="edit-seo.html?id=2" class="btn btn-sm btn-outline-secondary">Düzenle</a>
+            </td>
+          </tr>
+          <!-- Diğer satırlar… -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

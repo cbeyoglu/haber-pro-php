@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>NewsPro Theme – Makale Detayı</title>
+  <!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+</head>
+<body>
+
+  <!-- Top Marquee Ticker -->
+  <div class="bg-primary text-white py-1 marquee">
+    <marquee behavior="scroll" direction="left">
+      <span>SON DAKİKA: Yeni makale yayında!</span>
+      <span>SON DAKİKA: Özel röportaj yayında!</span>
+    </marquee>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm" data-aos="fade-down">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">NewsPro Theme</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="topNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="category.html">Teknoloji</a></li>
+          <!-- diğer menüler -->
+        </ul>
+        <button id="themeToggle" class="btn btn-outline-light me-2">🌙</button>
+        <form class="d-flex me-3">
+          <input class="form-control me-2" type="search" placeholder="Ara…">
+          <button class="btn btn-outline-light" type="submit">Ara</button>
+        </form>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle fs-4"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Giriş Yap</a></li>
+              <li><a class="dropdown-item" href="#">Kayıt Ol</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="container mt-4" data-aos="fade-right">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
+      <li class="breadcrumb-item"><a href="category.html">Teknoloji</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Makale Başlığı</li>
+    </ol>
+  </nav>
+
+  <main class="container my-5">
+    <article data-aos="fade-up">
+      <!-- Başlık ve Meta -->
+      <header class="mb-4">
+        <h1 class="display-5">Örnek Makale Başlığı: Teknolojide Son Gelişmeler</h1>
+        <div class="text-muted mb-3">
+          <span>Yazar: <strong>Ahmet Yılmaz</strong></span> |
+          <span>17 Nisan 2025</span> |
+          <span>Okuma Süresi: 5 dk</span>
+        </div>
+      </header>
+
+      <!-- İçerik -->
+      <section class="article-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat...</p>
+
+        <!-- Ara görsel -->
+        <figure class="my-4">
+          <img src="assets/images/article-image1.jpg" class="img-fluid rounded" alt="Ara görsel" loading="lazy">
+          <figcaption class="text-muted small text-center">Görsel Açıklaması</figcaption>
+        </figure>
+
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae...</p>
+
+        <!-- Blok alıntı -->
+        <blockquote class="blockquote p-3 bg-light border-start border-3 border-primary rounded">
+          <p class="mb-0">“Burada önemli bir alıntı yer alıyor; içeriğin vurucu noktasını vurgular.”</p>
+          <footer class="blockquote-footer">Ahmet Yılmaz</footer>
+        </blockquote>
+
+        <p>Nam tincidunt, sapien vitae ultrices fermentum, tellus purus lacinia purus...</p>
+
+        <!-- Gömülü Video -->
+        <div class="ratio ratio-16x9 my-4">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video" allowfullscreen loading="lazy"></iframe>
+        </div>
+
+        <p>Curabitur euismod neque eu magna elementum, sed vehicula quam tristique...</p>
+      </section>
+
+      <!-- Sosyal Paylaşım -->
+      <div class="d-flex align-items-center my-4" data-aos="fade-up">
+        <span class="me-2">Paylaş:</span>
+        <a href="#" class="me-3 text-decoration-none"><i class="bi bi-facebook fs-4 text-primary"></i></a>
+        <a href="#" class="me-3 text-decoration-none"><i class="bi bi-twitter fs-4 text-info"></i></a>
+        <a href="#" class="me-3 text-decoration-none"><i class="bi bi-linkedin fs-4 text-primary"></i></a>
+        <a href="#" class="text-decoration-none"><i class="bi bi-whatsapp fs-4 text-success"></i></a>
+      </div>
+    </article>
+
+    <!-- İlgili İçerikler -->
+    <section class="my-5" data-aos="fade-up">
+      <h4 class="mb-3">İlgili İçerikler</h4>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="assets/images/related1.jpg" class="card-img-top" alt="İlgili 1" loading="lazy">
+            <div class="card-body">
+              <h6 class="card-title">İlgili Haber Başlığı 1</h6>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <!-- Diğer 2–3 kart… -->
+      </div>
+    </section>
+
+    <!-- Yorumlar -->
+    <section class="my-5" data-aos="fade-up">
+      <h4 class="mb-3">Yorumlar (3)</h4>
+
+      <!-- Yorum Listesi -->
+      <div class="comments mb-4">
+        <div class="comment p-3 mb-3 bg-light rounded">
+          <div class="d-flex justify-content-between">
+            <strong>Ayşe Demir</strong>
+            <small class="text-muted">2 saat önce</small>
+          </div>
+          <p class="mb-1">Harika bir makale, elinize sağlık!</p>
+        </div>
+        <!-- Diğer yorumlar… -->
+      </div>
+
+      <!-- Yorum Formu -->
+      <div class="p-4 bg-light rounded shadow-sm">
+        <h5>Yorum Yaz</h5>
+        <form>
+          <div class="mb-2">
+            <input type="text" class="form-control" placeholder="Adınız">
+          </div>
+          <div class="mb-2">
+            <input type="email" class="form-control" placeholder="E-posta">
+          </div>
+          <div class="mb-2">
+            <textarea class="form-control" rows="4" placeholder="Yorumunuz"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Gönder</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="pt-5" data-aos="fade-up" style="background-color: var(--color-dark); color: var(--color-light);">
+    <!-- (Footer içeriği category.html ile aynı) -->
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-12 col-md-4">
+          <h6 class="fw-bold">Hakkımızda</h6>
+          <p class="small">NewsPro Theme, en güncel ve güvenilir haberleri sizlere aktarmak için 2025'ten bu yana hizmet veriyor.</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h6 class="fw-bold">Hızlı Linkler</h6>
+          <ul class="list-unstyled small">
+            <li><a href="index.html" class="text-light">Anasayfa</a></li>
+            <li><a href="category.html" class="text-light">Teknoloji</a></li>
+            <li><a href="#" class="text-light">Spor</a></li>
+            <li><a href="#" class="text-light">Ekonomi</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2">
+          <h6 class="fw-bold">Kategoriler</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-light">Politika</a></li>
+            <li><a href="#" class="text-light">Sağlık</a></li>
+            <li><a href="#" class="text-light">Yaşam</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4">
+          <h6 class="fw-bold">İletişim</h6>
+          <form class="mb-3">
+            <input type="text" class="form-control mb-2" placeholder="Adınız">
+            <input type="email" class="form-control mb-2" placeholder="E-posta">
+            <textarea class="form-control mb-2" rows="3" placeholder="Mesajınız"></textarea>
+            <button class="btn btn-primary w-100" type="submit">Gönder</button>
+          </form>
+          <h6 class="fw-bold mt-4">Bizi Takip Edin</h6>
+          <div class="mt-2">
+            <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="text-light me-3"><i class="bi bi-twitter fs-4"></i></a>
+            <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+        <div>© 2025 NewsPro Theme. Tüm hakları saklıdır.</div>
+        <div>
+          <a href="#" class="text-light me-3">Gizlilik Politikası</a>
+          <a href="#" class="text-light">Kullanım Şartları</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800 });
+    // Dark mode toggle
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      const html = document.documentElement;
+      html.dataset.theme = html.dataset.theme === 'light' ? 'dark' : 'light';
+      toggle.textContent = html.dataset.theme === 'light' ? '🌙' : '☀️';
+    });
+  </script>
+</body>
+</html>
